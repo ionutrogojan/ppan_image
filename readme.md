@@ -22,7 +22,7 @@ ppan.decode("./img/test.ppan"); // alien
 
 // run using: deno run --allow-read --allow-write main.ts
 
-// Output:
+/* Output:
 
 ░░░░░░████░░░░░░
 ░░░░████████░░░░
@@ -32,7 +32,7 @@ ppan.decode("./img/test.ppan"); // alien
 ░░░░██░░░░██░░░░
 ░░██░░████░░██░░
 ██░░██░░░░██░░██
-
+*/
 ```
 
 <br>
