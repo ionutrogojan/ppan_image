@@ -34,25 +34,25 @@
 
 */
 
-const _alien = "░░░░░░████░░░░░░\n░░░░████████░░░░\n░░████████████░░\n████░░████░░████\n████████████████\n░░░░██░░░░██░░░░\n░░██░░████░░██░░\n██░░██░░░░██░░██";
 const binary = "0001100000111100011111101101101111111111001001000101101010100101";
 
-import { encode } from "./lib/encode.ts";
-import { decode } from "./lib/decode.ts";
+import PPAN from "./lib/ppan.ts";
 
 
-encode(binary, "./img/test.ppan");
+const ppan = new PPAN();
 
-decode("./img/test.ppan"); // alien
+ppan.encode(binary, "./img/test.ppan");
 
-decode("./img/test1.ppan"); // S
+ppan.decode("./img/test.ppan"); // alien
 
-decode("./img/test2.ppan"); // 5
+ppan.decode("./img/test1.ppan"); // S
 
-decode("./img/test3.ppan"); // K
+ppan.decode("./img/test2.ppan"); // 5
 
-decode("./img/test4.ppan"); // *
+ppan.decode("./img/test3.ppan"); // K
 
-decode("./img/test5.ppan"); // %
+ppan.decode("./img/test4.ppan"); // *
+
+ppan.decode("./img/test5.ppan"); // %
 
 // deno run --allow-read --allow-write main.ts
